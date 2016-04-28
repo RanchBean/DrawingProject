@@ -12,6 +12,12 @@ public class DrawingPanel extends JPanel
 	private DrawingController baseController;
 	private ShapePanel shapePanel;
 	private JButton addRectangleButton;
+	private JButton addCircleButton;
+	private JButton addSquareButton;
+	private JButton addTriangleButton;
+	private JButton addEllipseButton;
+	private JButton addPolygonButton;
+	private JButton clearButton;	
 	private SpringLayout baseLayout;
 	private ArrayList<Rectangle> rectangleList;
 	
@@ -19,9 +25,10 @@ public class DrawingPanel extends JPanel
 	{
 		this.baseController = baseController;
 		addRectangleButton = new JButton("Add a rectangle");
-		//addPolygonButton = new JButton("add a polygon");
+		addPolygonButton = new JButton("add a polygon");
 		rectangleList = new ArrayList<Rectangle>();
 		shapePanel = new ShapePanel();
+		baseLayout = new  SpringLayout();
 		
 		setupPanel();
 		setupLayout();
@@ -29,9 +36,10 @@ public class DrawingPanel extends JPanel
 	}		
 	private void setupPanel()
 	{
-		baseLayout = new  SpringLayout();
+		
 		this.setLayout(baseLayout);
 		this.setBackground(Color.DARK_GRAY);
+		this.add(shapePanel);
 		this.add(addRectangleButton);
 	}
 	private void setupLayout()
