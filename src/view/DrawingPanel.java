@@ -62,6 +62,14 @@ public class DrawingPanel extends JPanel
 				repaint();
 			}
 		});
+		addPolygonButton.addActionListener(new ActionListner()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				
+			}
+		
+		});
 	}
 	@Override
 	protected void paintComponent(Graphics currentGraphics)
